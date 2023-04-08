@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/adamina</item>
+        <item>@font/akaya_telivigala</item>
+        <item>@font/alata</item>
+        <item>@font/aleo_light</item>
+        <item>@font/archivo_black</item>
+        <item>@font/artifika</item>
+        <item>@font/audiowide</item>
+        <item>@font/baloo_bhaina</item>
+        <item>@font/bowlby_one</item>
+        <item>@font/candal</item>
+    </array>
+</resources>
