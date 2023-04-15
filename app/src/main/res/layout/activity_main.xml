@@ -51,8 +51,8 @@
         android:layout_height="@dimen/_200sdp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="@dimen/_54sdp"
-        android:layout_marginTop="@dimen/_210sdp"
+        android:layout_marginStart="@dimen/_56sdp"
+        android:layout_marginTop="@dimen/_200sdp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/pointgame" />
