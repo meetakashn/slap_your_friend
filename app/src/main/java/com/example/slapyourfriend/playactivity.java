@@ -3,6 +3,7 @@ package com.example.slapyourfriend;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -30,6 +31,8 @@ public class playactivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final MediaPlayer mp = MediaPlayer.create(playactivity.this, R.raw.bonusmelody);
+                mp.start();
                 Intent intent = new Intent(playactivity.this,MainActivity.class);
                 startActivity(intent);
                 RotateAnimation rotateAnimation = new RotateAnimation(0,360*3,RotateAnimation.RELATIVE_TO_SELF

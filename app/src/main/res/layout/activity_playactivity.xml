@@ -7,33 +7,15 @@
     android:background="@drawable/done"
     tools:context=".playactivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="377dp"
-        android:layout_height="350dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_marginBottom="465dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692"
-        app:srcCompat="@drawable/slaplogo"
-        tools:ignore="ContentDescription" />
+
 
     <ImageView
         android:id="@+id/start"
-        android:layout_width="275dp"
-        android:layout_height="238dp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="277dp"
+        android:layout_marginTop="@dimen/_200sdp"
+        android:layout_marginEnd="@dimen/_84sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -42,27 +24,35 @@
         app:layout_constraintVertical_bias="0.692"
         app:srcCompat="@drawable/spinnerplay"
         tools:ignore="ContentDescription" />
-
+    <ImageView
+        android:layout_width="@dimen/_377sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692"
+        app:srcCompat="@drawable/slapyourfriendtext"
+        tools:ignore="ContentDescription" />
     <Button
         android:id="@+id/playbtn"
-        android:layout_width="143dp"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="209dp"
+        android:layout_width="@dimen/_143sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_409sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
         android:backgroundTint="@null"
         android:fontFamily="monospace"
         android:text="Play"
         android:textColor="#FFFB02"
-        android:textSize="@dimen/_18sdp"
+        android:textSize="@dimen/_20sdp"
         app:backgroundTint="#00FFFFFF"
         app:backgroundTintMode="@null"
         app:icon="@android:drawable/ic_media_play"
-        app:iconTint="#FFE500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:iconTint="#FFE500" />
 
 </RelativeLayout>

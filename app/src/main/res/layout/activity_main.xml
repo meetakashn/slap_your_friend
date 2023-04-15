@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainactivitybg"
+    android:background="@drawable/mainslapbg"
+    android:id="@+id/container"
     tools:context=".MainActivity">
-
-
 <!-- Spinner Code start -->
-
     <ImageView
         android:id="@+id/spinner"
         android:layout_width="@dimen/_200sdp"
@@ -17,9 +15,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/_55sdp"
-        android:layout_marginTop="@dimen/_223sdp"
+        android:layout_marginStart="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_200sdp"
         android:layout_marginEnd="@dimen/_55sdp"
         android:layout_marginBottom="@dimen/_247sdp"
         android:adjustViewBounds="true"
@@ -31,8 +28,8 @@
         android:layout_height="@dimen/_200sdp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="@dimen/_55sdp"
-        android:layout_marginTop="@dimen/_223sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_200sdp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/spinnerarrow" />
@@ -41,18 +38,207 @@
         android:id="@+id/play"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_30ssp"
-        android:layout_marginStart="@dimen/_110sdp"
-        android:layout_marginTop="@dimen/_430sdp"
+        android:layout_marginStart="@dimen/_115sdp"
+        android:layout_marginTop="@dimen/_405sdp"
         android:layout_marginEnd="@dimen/_86sdp"
-        android:text="Spin" />
+        android:background="@drawable/shape"
+        android:text="Spin"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#4B232AAD" />
 
     <!-- Spinner Code End -->
     <!-- Player One Start -->
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        app:srcCompat="@drawable/pingball2" />
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:layout_marginStart="@dimen/_165sdp"
+        app:srcCompat="@drawable/pingball" />
 
+    <TextView
+        android:id="@+id/textviewpf1"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_107sdp"
+        android:text="00" />
+    <TextView
+        android:id="@+id/textviewps1"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/purple_700"
+        android:layout_marginStart="@dimen/_178sdp"
+        android:text="00" />
+    <RadioGroup
+        android:id="@+id/radiogroupp1"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:layout_marginStart="@dimen/_95sdp"
+        android:orientation="horizontal">
 
+        <RadioButton
+            android:id="@+id/radio_buttonpf1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:buttonTint="#00B0FF"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:text="" />
+        <RadioButton
+            android:id="@+id/radio_buttonps1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:buttonTint="#FF9100"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:text="" />
+    </RadioGroup>
 
+    <Button
+        android:id="@+id/resetnumberpf1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_106sdp"
+        android:layout_marginTop="@dimen/_550sdp"
+        android:text="new Number"
+        android:textColor="#FF0202"
+        app:backgroundTint="#DAFA4A" />
 
-
+    <!-- points table -->
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_365sdp"
+        android:layout_marginStart="@dimen/_120sdp"
+        app:srcCompat="@drawable/redteampoint" />
+    <TextView
+        android:id="@+id/redteamp1"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_472sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/purple_700"
+        android:layout_marginStart="@dimen/_243sdp"
+        android:text="0" />
+    <ImageView
+        android:id="@+id/redteamplus1"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_320sdp"
+        android:layout_marginStart="@dimen/_250sdp"
+        app:srcCompat="@drawable/redteam1" />
     <!-- Player One End -->
+    <!--Player two start -->
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_102sdp"
+        android:rotation="180"
+        app:srcCompat="@drawable/pingball2" />
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_165sdp"
+        android:rotation="180"
+        app:srcCompat="@drawable/pingball" />
 
+    <TextView
+        android:id="@+id/textviewpf2"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center"
+        android:textColor="#EF0000"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:rotation="180"
+        android:text="00" />
+    <TextView
+        android:id="@+id/textviewps2"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="#001AFF"
+        android:layout_marginStart="@dimen/_158sdp"
+        android:rotation="180"
+        android:text="00" />
+
+    <Button
+        android:id="@+id/resetnumberpf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:rotation="180"
+        android:text="new Number"
+        android:textColor="#050703"
+        app:backgroundTint="#D3FF96" />
+    <RadioGroup
+        android:id="@+id/radiogroupp2"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_128sdp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_buttonpf2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:buttonTint="#00B0FF"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="" />
+        <RadioButton
+            android:id="@+id/radio_buttonps2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:buttonTint="#FF9100"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="" />
+    </RadioGroup>
+    <!-- points table -->
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:rotation="180"
+        app:srcCompat="@drawable/blueteampoint" />
+    <TextView
+        android:id="@+id/blueteamp2"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#FF0000"
+        android:layout_marginStart="@dimen/_74sdp"
+        android:rotation="180"
+        android:text="0" />
+    <ImageView
+        android:id="@+id/blueteamplus1"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_230sdp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:rotation="180"
+        app:srcCompat="@drawable/blueteam1" />
+    <!--Player two end -->
 </RelativeLayout>

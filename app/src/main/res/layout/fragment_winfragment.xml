@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redteamwincol"
+    tools:context=".winfragment">
+
+    <ImageView
+        android:layout_width="478dp"
+        android:layout_height="889dp"
+        android:src="@drawable/redteamwinani"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_500sdp"
+        android:backgroundTint="#00000000"
+        android:fontFamily="@font/gugi"
+        android:shadowColor="#00FFFFFF"
+        android:text="Restart"
+        android:textColor="#00FFCC"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        android:textSize="@dimen/_25sdp"
+        app:backgroundTint="#00FFFFFF"
+        app:icon="@android:drawable/ic_popup_sync"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#00FFFFFF"
+        app:strokeColor="#00FFFFFF" />
+    <ImageView
+        android:id="@+id/spinner"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_250sdp"
+        android:layout_marginEnd="@dimen/_55sdp"
+        android:layout_marginBottom="@dimen/_247sdp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/spinnerplay" />
+    <ImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_270sdp"
+        android:layout_marginEnd="@dimen/_55sdp"
+        android:layout_marginBottom="@dimen/_247sdp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/redteamtext" />
+</FrameLayout>

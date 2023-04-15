@@ -3,6 +3,7 @@ package com.example.slapyourfriend;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 public class splash extends AppCompatActivity {
@@ -21,6 +22,8 @@ public class splash extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
+                    final MediaPlayer mp = MediaPlayer.create(splash.this, R.raw.arcaderising);
+                    mp.start();
                     Intent intent = new Intent(splash.this,playactivity.class);
                     startActivity(intent);
                 }
