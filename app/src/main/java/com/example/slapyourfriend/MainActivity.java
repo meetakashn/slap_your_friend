@@ -107,13 +107,9 @@ public class MainActivity extends AppCompatActivity {
                 textviewpf1.setText(String.valueOf(ppf1));
                 textviewps1.setText(String.valueOf(pps1));
                 MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.gameclick);
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        mediaPlayer.release();
-                    }
-                });
                 mp.start();
+
+
             }
         });
         //player 1 rest number button End
@@ -176,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
     public void spin() {
             resetnumberpf1.setEnabled(false);
             resetnumberpf2.setEnabled(false);
