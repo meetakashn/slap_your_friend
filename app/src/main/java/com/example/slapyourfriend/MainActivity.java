@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         resetnumberpf1= (Button) findViewById(R.id.resetnumberpf1);
         textviewpf1=findViewById(R.id.textviewpf1);
         textviewps1=findViewById(R.id.textviewps1);
-        int j=12;
+        int j=13;
         pf1[0]=random.nextInt(j);
         ppf1=pf1[0];
         ps1[0]=random.nextInt(j);
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 textviewps1.setText(String.valueOf(pps1));
                 MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.gameclick);
                 mp.start();
+
 
 
             }
