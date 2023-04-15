@@ -24,6 +24,7 @@ public class splash extends AppCompatActivity {
                 finally {
                     final MediaPlayer mp = MediaPlayer.create(splash.this, R.raw.arcaderising);
                     mp.start();
+
                     Intent intent = new Intent(splash.this,playactivity.class);
                     startActivity(intent);
                 }

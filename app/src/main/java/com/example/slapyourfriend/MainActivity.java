@@ -58,6 +58,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView imageView = (ImageView) findViewById(R.id.pointgame);
+        AlphaAnimation animation = new AlphaAnimation(0.0f, 1.0f);
+        animation.setDuration(3000);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                imageView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                imageView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                // Actions to perform when the animation repeats
+            }
+        });
+        imageView.startAnimation(animation);
         wheel = findViewById(R.id.spinner);
         playbutton = findViewById(R.id.play);
         redteamplus1=findViewById(R.id.redteamplus1);
@@ -65,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         blueteamplus1=findViewById(R.id.blueteamplus1);
         blueteamplus1.setVisibility(View.INVISIBLE);
         getdegreesector();
+
         //player 1 rest number button start
         resetnumberpf1= (Button) findViewById(R.id.resetnumberpf1);
         textviewpf1=findViewById(R.id.textviewpf1);
@@ -85,7 +106,13 @@ public class MainActivity extends AppCompatActivity {
                 pps1=ps1[0];
                 textviewpf1.setText(String.valueOf(ppf1));
                 textviewps1.setText(String.valueOf(pps1));
-                final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.gameclick);
+                MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.gameclick);
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
                 mp.start();
             }
         });
@@ -163,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAnimationStart(Animation animation) {
                         final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.gamespin);
                         mp.start();
+
                     }
 
                     @Override
@@ -197,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
                                     });
                                     final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.smallwin1);
                                     mp.start();
+
                                     redteamplus1.startAnimation(fadeInAnimation);
                                     //Checking for Total points
                                 }
@@ -221,6 +250,7 @@ public class MainActivity extends AppCompatActivity {
                                     });
                                     final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.smallwin1);
                                     mp.start();
+
                                     redteamplus1.startAnimation(fadeInAnimation);
 
 
@@ -255,6 +285,7 @@ public class MainActivity extends AppCompatActivity {
                                     });
                                     final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.smallwin2);
                                     mp.start();
+
                                     blueteamplus1.startAnimation(fadeInAnimation);
                                 }
                             } else if (radio_buttonps2==radioButtonpp2) {
@@ -277,6 +308,7 @@ public class MainActivity extends AppCompatActivity {
                                     });
                                     final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.smallwin2);
                                     mp.start();
+
                                     blueteamplus1.startAnimation(fadeInAnimation);
                                 }
                             }
@@ -286,13 +318,14 @@ public class MainActivity extends AppCompatActivity {
                         // Enable thr button
                         resetnumberpf1.setEnabled(true);
                         resetnumberpf2.setEnabled(true);
-                        if(redteampoint==2){
+                        if(redteampoint==3){
                             Toast.makeText(MainActivity.this, "Red team", Toast.LENGTH_SHORT).show();
                             Fragment fragment =new winfragment();
                             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.container,fragment).commit();
                             final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.casinoreward);
                             mp.start();
+
                             playbutton.setVisibility(View.GONE);
                             resetnumberpf1.setVisibility(View.GONE);
                             resetnumberpf2.setVisibility(View.GONE);
@@ -300,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
                             radioGroupp2.setVisibility(View.GONE);
 
                         }
-                        if(blueteampoint==2){
+                        if(blueteampoint==3){
                             Toast.makeText(MainActivity.this, "Blue team", Toast.LENGTH_SHORT).show();
                             Fragment fragment =new blueteam();
                             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();

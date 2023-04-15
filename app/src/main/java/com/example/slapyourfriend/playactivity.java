@@ -33,6 +33,7 @@ public class playactivity extends AppCompatActivity {
             public void onClick(View v) {
                 final MediaPlayer mp = MediaPlayer.create(playactivity.this, R.raw.bonusmelody);
                 mp.start();
+
                 Intent intent = new Intent(playactivity.this,MainActivity.class);
                 startActivity(intent);
                 RotateAnimation rotateAnimation = new RotateAnimation(0,360*3,RotateAnimation.RELATIVE_TO_SELF

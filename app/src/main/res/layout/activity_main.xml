@@ -45,6 +45,17 @@
         android:text="Spin"
         android:textColor="#FFFFFF"
         app:backgroundTint="#4B232AAD" />
+    <ImageView
+        android:id="@+id/pointgame"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_54sdp"
+        android:layout_marginTop="@dimen/_210sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/pointgame" />
 
     <!-- Spinner Code End -->
     <!-- Player One Start -->
@@ -126,7 +137,7 @@
         android:id="@+id/redteamp1"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_472sdp"
+        android:layout_marginTop="@dimen/_471sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:gravity="center"
         android:textSize="@dimen/_13sdp"
@@ -168,6 +179,7 @@
         android:layout_marginStart="@dimen/_100sdp"
         android:rotation="180"
         android:text="00" />
+
     <TextView
         android:id="@+id/textviewps2"
         android:layout_width="@dimen/_43sdp"
